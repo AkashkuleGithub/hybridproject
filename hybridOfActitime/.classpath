@@ -7,7 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="jars/selenium-server-4.8.0.jar"/>
-	<classpathentry kind="lib" path="drivers/chromedriver.exe"/>
 	<classpathentry kind="lib" path="jars/activation-1.1.1.jar"/>
 	<classpathentry kind="lib" path="jars/commons-codec-1.11.jar"/>
 	<classpathentry kind="lib" path="jars/commons-collections4-4.2.jar"/>
@@ -27,12 +26,6 @@
 	<classpathentry kind="lib" path="jars/poi-ooxml-schemas-4.1.0.jar"/>
 	<classpathentry kind="lib" path="jars/poi-scratchpad-4.1.0.jar"/>
 	<classpathentry kind="lib" path="jars/xmlbeans-3.0.2.jar"/>
-	<classpathentry kind="lib" path="drivers/geckodriver.exe"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3">
-		<attributes>
-			<attribute name="test" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

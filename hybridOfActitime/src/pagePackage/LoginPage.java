@@ -67,13 +67,17 @@ public class LoginPage {
 	{
 		UsernameTB.sendKeys(invalidUsername);
 		Thread.sleep(2000);
-		
 		PasswordTB.sendKeys(invalidPassword);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		LoginButton.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		UsernameTB.clear();
 	}
+
+
+	
+		
+	
 	}
 
 

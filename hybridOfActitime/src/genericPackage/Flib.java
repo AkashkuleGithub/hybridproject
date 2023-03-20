@@ -16,12 +16,14 @@ public class Flib {
 	 //is use to store generic resuable method....
 	//read excel data
 	
+	
+
 	public String readExcelData(String excelPath,String sheetName,int rowCount,int cellCount) throws EncryptedDocumentException, IOException {
 		{
 		FileInputStream fis = new FileInputStream(excelPath);
 	Workbook wb = WorkbookFactory.create(fis);
 	Sheet sheet = wb.getSheet(sheetName);
-	Row row = sheet.getRow(rowCount);
+	 Row row = sheet.getRow(rowCount);
 	Cell cell = row.getCell(cellCount);
 	String data = cell.getStringCellValue();
 	 return data ;
@@ -29,7 +31,7 @@ public class Flib {
 	}
 		
 	                  //to get last RowCount
-	       public int rowCount(String excelPath,String sheetName) throws EncryptedDocumentException, IOException
+	       public int getrowCount(String excelPath,String sheetName) throws EncryptedDocumentException, IOException
 	       { 
 	      FileInputStream fis = new FileInputStream(excelPath);
 	      Workbook wb = WorkbookFactory.create(fis);

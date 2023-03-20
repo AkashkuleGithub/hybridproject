@@ -7,15 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class HomePage {
-	@FindBy(xpath ="//a[.='Logout']")private WebElement logoutlink;
+	@FindBy(xpath ="//a[text()='Create new tasks']")private WebElement createNewTaskLink;
 
-	@FindBy(id="SubmitTTButton")private WebElement saveLeaveTimeButton;
+	@FindBy(xpath="//a[text()='Logout']")private WebElement LogoutLink;
 	
-	@FindBy(xpath = "//div[.='Users']")private WebElement users;
+	@FindBy(xpath = "//a[text()='Insert existing tasks']")private WebElement InsertExistingTasks;
 	
-	@FindBy(name ="usersSelector.selectedUser")private WebElement enterTimeTrackDropDropDown;
 	
-	//intilaization
+	
+	//initialization
 	
 
     public HomePage(WebDriver driver)
@@ -24,43 +24,27 @@ public class HomePage {
     }
     //utilization
     
+    public WebElement getCreateNewTaskLink()
+    {
+    	return createNewTaskLink;
+    }
     public WebElement getLogoutLink()
     {
-    	return logoutlink;
+    	return LogoutLink; 
     }
-    public WebElement getSaveLeaveTimeButton()
+    public WebElement getInsertExistingTask()
     {
-    	return saveLeaveTimeButton; 
-    }
-    public WebElement getUser()
-    {
-    	return users;
+    	return InsertExistingTasks;
    	}
     
-    public WebElement getEnterTimeTrackDRopDown()
-    {
-    	return enterTimeTrackDropDropDown;
-    }
+   
     
-    //operational method
+    //logout method
     
-    public void logOut() 
+    public void logOutmethod() 
     {
-    	logoutlink.click();
+    	LogoutLink.click();
     }
-    public void clickOnUser() 
-    {
-    	users.click();
-    }
-    public void clickOnSaveLeaveTime() 
-    {
-    	saveLeaveTimeButton.click();
-    }
-    public void selectUser(int index)
-    {
-    	Select sel = new Select(enterTimeTrackDropDropDown);
-    	sel.selectByIndex(index);
-    	
-    }
-   }
+}
+   
 

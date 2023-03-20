@@ -12,6 +12,12 @@ import org.testng.Reporter;
 
 		@Override
 		public void onTestStart(ITestResult result) {
+			Reporter.log("the test has been started",true);
+			
+		}
+		
+		@Override
+		public void onTestSuccess(ITestResult result) {
 			
 		}
 
@@ -22,9 +28,6 @@ import org.testng.Reporter;
 			failed(methodName);
 			
 		}
-			
-		
-			
 
 		@Override
 		public void onTestSkipped(ITestResult result) {
@@ -47,15 +50,12 @@ import org.testng.Reporter;
 		}
 
 		@Override
-		public void initialization() {
+		public void onFinish(ITestContext context) {
 			// TODO Auto-generated method stub
-			super.initialization();
+			Reporter.log("the test is complete",true);
 		}
 
-		@Override
-		public void failed(String methodName) {
-			// TODO Auto-generated method stub
-			super.failed(methodName);
+		
 		}
-	}
+	
 
